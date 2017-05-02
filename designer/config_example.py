@@ -5,5 +5,5 @@ PATH = 'C:\Program Files\Allegorithmic\Substance Designer 6'
 
 # Shelf locs
 SHELVES = [
-    'E:\Substance\Shelf'
+    'C:\DesignerShelf'
 ]

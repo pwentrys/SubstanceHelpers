@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from templates.shelf import Shelf
 
 
@@ -17,10 +15,19 @@ class Shelves:
         self.parse_shelves(shelves)
 
     def parse_shelves(self, shelves):
+        """
+        Parse string shelf objs to shelves objs.
+        :param shelves: 
+        :return: 
+        """
         if len(shelves) > 0:
-            self.shelves = [Shelf(shelf) for shelf in shelves if Path.exists(shelf)]
+            self.shelves = [Shelf(shelf) for shelf in shelves]
 
         self.__validate__()
 
     def __validate__(self):
+        """
+        essentially .isValid() check.
+        :return: 
+        """
         self.valid = len(self.shelves) > 0

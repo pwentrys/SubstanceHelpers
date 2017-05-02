@@ -13,7 +13,7 @@ class App:
         :param shelves: = [shelf location strings]
         """
         self.name = name
-        self.path = path
+        self.path = Path(path)
         self.shelves = Shelves(shelves)
         self.valid = True
 
@@ -28,7 +28,7 @@ class App:
             return
 
         # Ensure path exists
-        if not Path.exists(self.path):
+        if not self.path.exists():
             self.valid = False
             f"{self.name} - Invalid Path: {self.path}"
             return

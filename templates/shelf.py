@@ -6,10 +6,14 @@ class Shelf:
     # valid = ensure proper config.
 
     def __init__(self, path):
-        self.path = path
+        self.path = Path(path)
         self.valid = False
 
         self.__validate__()
 
     def __validate__(self):
-        self.valid = Path.exists(self.path)
+        """
+        essentially .isValid() check.
+        :return: 
+        """
+        self.valid = self.path.exists()

@@ -1,3 +1,12 @@
-# from config import apps
+from designer.designer import DESIGNER
+from painter.painter import PAINTER
 
-# TODO prompts
+# Comment out respective above and below to disable an app.
+
+apps = [
+    PAINTER,
+    DESIGNER,
+]
+
+# Random test
+[print(app.name) for app in apps]
